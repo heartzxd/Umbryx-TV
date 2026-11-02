@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Help · Umbryx TV</title>
+<meta name="description" content="How-to videos and answers for Umbryx TV: the phone remote, profiles, themes, game night, the remote lock and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap">
+<style>
+/* Help: watch first, then quick answers. Same quiet white pages as the rest of the site. */
+:root { --bg: #fbfbfd; --panel: #f5f5f7; --ink: #1d1d1f; --grey: #6e6e73; --line: #e3e3e8; --card: #ffffff; --accent: #ff6a2b;
+  --font: "Geist", "Segoe UI", system-ui, sans-serif; color-scheme: light; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--bg); color: var(--ink); font: 400 18px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: rgba(251,251,253,.85); backdrop-filter: saturate(180%) blur(18px); border-bottom: 1px solid rgba(0,0,0,.06); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 11; background: var(--bg); }
+nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; font-size: 15px; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -0.03em; text-decoration: none; font-size: 19px; }
+.ring { width: 20px; height: 20px; border-radius: 50%; border: 3px solid var(--ink); position: relative; flex: none; }
+.ring::after { content: ""; position: absolute; inset: -3px; border-radius: 50%; border: 3px solid transparent; border-top-color: var(--accent); transform: rotate(30deg); }
+nav .links { display: flex; gap: 22px; color: var(--grey); }
+nav .links a { text-decoration: none; }
+h1 { font-size: clamp(48px, 8vw, 96px); letter-spacing: -0.05em; line-height: 1; margin: 0; font-weight: 800; }
+h2 { font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -0.04em; line-height: 1.06; margin: 0 0 8px; }
+h3 { font-size: 21px; letter-spacing: -0.02em; margin: 0; }
+p { margin: 0 0 12px; }
+.lede { color: var(--grey); font-size: clamp(19px, 2vw, 22px); max-width: 44ch; margin-top: 14px; }
+header { padding-block: 64px 30px; }
+section { padding-block: 56px; }
+.panel { background: var(--panel); }
+
+.videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px; margin-top: 30px; }
+.video { background: var(--card); border-radius: 22px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+.video video { width: 100%; aspect-ratio: 16 / 9; max-width: 100%; display: block; background: #f0f0f3; }
+.video div { padding: 16px 20px 20px; }
+.video span { color: var(--grey); font-size: 15px; }
+
+.topics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.topics a { text-decoration: none; font-size: 15px; font-weight: 500; padding: 8px 15px; border-radius: 99px; border: 1px solid var(--line); background: var(--card); }
+
+.answer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 40px; align-items: start; padding-block: 44px; border-top: 1px solid var(--line); }
+.answer:first-of-type { border-top: 0; }
+.answer.wide { grid-template-columns: minmax(0, 1fr) minmax(0, 520px); }
+.answer ol, .answer ul { padding-left: 22px; margin: 6px 0 12px; }
+.answer li { margin-bottom: 8px; }
+.answer .note { color: var(--grey); font-size: 16px; }
+.shot-phone { width: 100%; max-width: 260px; justify-self: center; background: linear-gradient(160deg, #2c2c2e, #0d0d0e); padding: 8px; border-radius: 40px; box-shadow: 0 30px 60px -25px rgba(0,0,0,.45); }
+.shot-phone img { border-radius: 33px; aspect-ratio: 585 / 1266; width: 100%; object-fit: cover; }
+.shot-tv { background: linear-gradient(180deg, #1c1c1e, #0a0a0b); padding: 8px; border-radius: 14px; box-shadow: 0 30px 60px -28px rgba(0,0,0,.45); }
+.shot-tv img { border-radius: 4px; aspect-ratio: 16 / 9; width: 100%; object-fit: cover; }
+b, strong { font-weight: 600; }
+
+details { border-bottom: 1px solid var(--line); padding-block: 18px; }
+summary { cursor: pointer; font-weight: 600; font-size: 19px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--grey); font-weight: 400; font-size: 24px; line-height: 1; }
+details[open] summary::after { content: "−"; }
+details p, details ol { color: var(--grey); margin-top: 10px; }
+.contact { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 30px; text-align: center; }
+.contact a { font-weight: 600; font-size: 21px; text-decoration: none; display: inline-block; margin: 6px 14px; user-select: all; }
+footer { border-top: 1px solid var(--line); padding-block: 24px 40px; color: var(--grey); font-size: 14px; }
+footer .wrap { display: flex; gap: 18px; flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .answer, .answer.wide { grid-template-columns: 1fr; gap: 24px; }
+  nav .links { gap: 14px; }
+}
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="wrap">
+  <a class="brand" href="index.html"><span class="ring" aria-hidden="true"></span>Umbryx TV</a>
+  <div class="links"><a href="#videos">Videos</a><a href="#answers">How to</a><a href="#fix">Fix a problem</a></div>
+</div></nav>
+
+<header><div class="wrap">
+  <h1>Help</h1>
+  <p class="lede">Short videos and quick answers for everything Umbryx TV does. Still stuck? I'm a call away.</p>
+  <div class="topics">
+    <a href="#remote">Phone remote</a><a href="#profiles">Profiles &amp; kids</a><a href="#themes">Themes</a><a href="#games">Game night</a>
+    <a href="#lock">Remote lock</a><a href="#screentime">Screen time</a><a href="#google">Google TV home</a><a href="#fix">Fix a problem</a>
+  </div>
+</div></header>
+
+<section id="videos" class="panel"><div class="wrap">
+  <h2>Watch how</h2>
+  <div class="videos">
+    <div class="video"><video src="videos/phone-remote.mp4" poster="videos/phone-remote.jpg" controls preload="none" playsinline></video><div><h3>Use your phone as the remote</h3><span>30 seconds</span></div></div>
+    <div class="video"><video src="videos/game-night.mp4" poster="videos/game-night.jpg" controls preload="none" playsinline></video><div><h3>Your first game night</h3><span>34 seconds</span></div></div>
+    <div class="video"><video src="videos/profiles.mp4" poster="videos/profiles.jpg" controls preload="none" playsinline></video><div><h3>Add a person or a kid</h3><span>28 seconds</span></div></div>
+    <div class="video"><video src="videos/themes.mp4" poster="videos/themes.jpg" controls preload="none" playsinline></video><div><h3>Change your theme</h3><span>23 seconds</span></div></div>
+    <div class="video"><video src="videos/lock-remote.mp4" poster="videos/lock-remote.jpg" controls preload="none" playsinline></video><div><h3>Lock the TV remote</h3><span>24 seconds</span></div></div>
+    <div class="video"><video src="videos/help.mp4" poster="videos/help.jpg" controls preload="none" playsinline></video><div><h3>Back to Google TV, and getting help</h3><span>24 seconds</span></div></div>
+  </div>
+</div></section>
+
+<section id="answers"><div class="wrap">
+  <div class="answer wide" id="remote">
+    <div>
+      <h2>Use your phone as the remote</h2>
+      <ol>
+        <li>On the TV, open the <b>Join the remote</b> tile (the code is also in <b>Umbryx TV Settings › Phone remote</b>).</li>
+        <li>Point your phone's camera at the code and tap the link. Your phone needs to be on the same Wi-Fi as the TV.</li>
+        <li>That's it. Use the arrows and OK, the volume, <b>Type</b> to search, and <b>Draw &amp; send messages</b> to pop a note up on the TV.</li>
+      </ol>
+      <p class="note">Anyone who scans the code gets a guest remote. To unlock everything (settings, profiles, installing apps), type the <b>owner code</b> under <b>More</b> on your phone. It's shown in Umbryx TV Settings › Phone remote.</p>
+    </div>
+    <div class="shot-tv"><img src="img/tv_join.jpg" alt="The Join the remote code on the TV" loading="lazy"></div>
+  </div>
+
+  <div class="answer" id="profiles">
+    <div>
+      <h2>Add a person or a kid</h2>
+      <ol>
+        <li>On the phone remote, open <b>Profiles</b> and tap <b>Add profile</b>.</li>
+        <li>Type their name, pick a picture and a colour. Add a 4-number PIN if you'd like.</li>
+        <li>For a kid, turn on <b>Kids profile</b>, then choose which apps they can use, a daily TV limit and a bedtime. After bedtime the TV stays locked for them until 6am.</li>
+      </ol>
+      <p class="note">Everyone shows up in "Who's watching?" when the TV turns on. Tap a profile on your phone to be them; <b>Put on TV</b> switches the TV too.</p>
+    </div>
+    <div class="shot-phone"><img src="img/ph_profile_kid.jpg" alt="Editing Mia's profile, with Kids profile turned on" loading="lazy"></div>
+  </div>
+
+  <div class="answer" id="themes">
+    <div>
+      <h2>Change your theme</h2>
+      <p>Open <b>Themes</b> on the phone remote and tap one: the TV changes straight away. Each profile keeps its own theme. You can also choose on the TV in <b>Umbryx TV Settings</b>.</p>
+      <p class="note">For <b>Your Photo</b>, pick any photo from your phone and it becomes the background.</p>
+    </div>
+    <div class="shot-phone"><img src="img/ph_themes.jpg" alt="The Themes screen on the phone remote" loading="lazy"></div>
+  </div>
+
+  <div class="answer" id="games">
+    <div>
+      <h2>Play game night</h2>
+      <ol>
+        <li>Open a game from the home screen: <b>Quiz Night</b>, <b>Word Guess</b>, <b>Draw &amp; Guess</b> or <b>Bingo</b>. Everyone's phone switches to the game by itself.</li>
+        <li><b>Quiz Night:</b> the owner picks up to five categories on their phone and presses Start. Pick a square, buzz in first, type your answer.</li>
+        <li><b>The other games:</b> everyone joins on their phone, then the owner presses <b>Start</b>.</li>
+      </ol>
+      <p class="note">Press Back to leave a game; it keeps its place until someone starts another.</p>
+    </div>
+    <div class="shot-phone"><img src="img/ph_quiz_setup.jpg" alt="Picking Quiz Night categories on the owner's phone" loading="lazy"></div>
+  </div>
+
+  <div class="answer" id="lock">
+    <div>
+      <h2>Lock the TV remote</h2>
+      <p>On the owner's phone remote, scroll down the Remote screen to <b>Lock the TV remote</b> and tap it. The TV's own remote stops working; phone remotes still work. Tap it again to unlock. It stays locked even if the TV restarts.</p>
+    </div>
+    <div class="shot-phone"><img src="img/ph_lock_on.jpg" alt="Lock the TV remote, switched on" loading="lazy"></div>
+  </div>
+
+  <div class="answer" id="screentime">
+    <div>
+      <h2>See screen time</h2>
+      <p>On the owner's phone, open <b>More › Screen time</b> and tap <b>See the full report</b>: everyone's time this week, day by day, and the apps they used most, compared with last week. Each Monday the TV shows a short summary too.</p>
+      <p class="note">Screen time stays on your TV and is kept for about five weeks. Time on the home screen and the screensaver doesn't count.</p>
+    </div>
+    <div></div>
+  </div>
+
+  <div class="answer" id="google">
+    <div>
+      <h2>Get back to Google TV</h2>
+      <p><b>Hold</b> the Home button on your TV remote for a second to open the original Google TV home. <b>Press</b> Home to come back to Umbryx TV.</p>
+      <p class="note">Your apps are the same in both. Updates to Umbryx TV install by themselves; to check now, open <b>More › Updates</b> on the owner's phone.</p>
+    </div>
+    <div></div>
+  </div>
+</div></section>
+
+<section id="fix" class="panel"><div class="wrap">
+  <h2>Something not working?</h2>
+  <div style="max-width:820px">
+    <details><summary>My phone can't open the remote</summary>
+      <p>Make sure your phone is on the same Wi-Fi as the TV (not mobile data), and that the TV is on. Then scan the code again from the Join the remote tile.</p></details>
+    <details><summary>The phone remote's buttons don't do anything</summary>
+      <p>The buttons need the TV's <b>Network debugging</b> to be allowed. On the TV, open <b>Umbryx TV Settings › Phone remote</b> and select <b>Connect</b>. If the TV asks <b>"Allow debugging?"</b>, tick <b>Always allow</b> and pick <b>Allow</b>.</p></details>
+    <details><summary>The TV asked "Allow debugging?" again</summary>
+      <p>That's Umbryx TV asking to use the phone remote's buttons, sometimes after the TV restarts. Tick <b>Always allow</b> and pick <b>Allow</b>.</p></details>
+    <details><summary>The TV's remote doesn't do anything</summary>
+      <p>The remote might be locked. On the owner's phone, open the Remote screen and tap <b>Unlock the TV remote</b>. If that's not it, check the remote's batteries.</p></details>
+    <details><summary>The Home button opens Google TV, not Umbryx TV</summary>
+      <p>A short press opens Umbryx TV and holding it opens Google TV, so try a quick press. If it still doesn't, get in touch and I'll sort it out.</p></details>
+    <details><summary>A kid's profile is locked</summary>
+      <p>They've used up today's TV time or it's past their bedtime. A grown-up can switch to their own profile, or change the limits in <b>Profiles</b> on the owner's phone.</p></details>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="contact">
+    <h2>Still stuck? I'm happy to help.</h2>
+    <p style="color:var(--grey)">Free for 6 months after your installation. You can also scan the Help &amp; contact tile on your TV to save my details.</p>
+    <a href="mailto:umbryxtvsupport@gmail.com">umbryxtvsupport@gmail.com</a><a href="tel:0423150432">0423 150 432</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><a href="index.html">Home</a><a href="works.html">Works with</a><a href="feedback.html">Feedback</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms &amp; refunds</a><span>Umbryx TV · Declan</span><span>Designed and built with Claude, an AI by Anthropic.</span></div></footer>
+</body>
+</html>

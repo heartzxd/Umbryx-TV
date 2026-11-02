@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Works with · Umbryx TV</title>
+<meta name="description" content="Which TVs Umbryx TV works on: Android TV and Google TV. What's been tested, what should work, and how to check yours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap">
+<style>
+/* Works with: an honest list. Tested, should work, won't work, and how to check your own TV. */
+:root { --bg: #fbfbfd; --panel: #f5f5f7; --ink: #1d1d1f; --grey: #6e6e73; --line: #e3e3e8; --card: #ffffff; --accent: #ff6a2b;
+  --ok: #1f9d55; --maybe: #6e6e73; --no: #d93b3b; --font: "Geist", "Segoe UI", system-ui, sans-serif; color-scheme: light; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 400 18px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+.wrap { max-width: 1000px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: rgba(251,251,253,.85); backdrop-filter: saturate(180%) blur(18px); border-bottom: 1px solid rgba(0,0,0,.06); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 11; background: var(--bg); }
+nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; font-size: 15px; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -0.03em; text-decoration: none; font-size: 19px; }
+.ring { width: 20px; height: 20px; border-radius: 50%; border: 3px solid var(--ink); position: relative; flex: none; }
+.ring::after { content: ""; position: absolute; inset: -3px; border-radius: 50%; border: 3px solid transparent; border-top-color: var(--accent); transform: rotate(30deg); }
+nav .links { display: flex; gap: 22px; color: var(--grey); }
+nav .links a { text-decoration: none; }
+h1 { font-size: clamp(46px, 8vw, 92px); letter-spacing: -0.05em; line-height: 1; margin: 0; font-weight: 800; }
+h2 { font-size: clamp(30px, 4.2vw, 46px); letter-spacing: -0.04em; line-height: 1.08; margin: 0 0 8px; }
+p { margin: 0 0 12px; }
+.lede { color: var(--grey); font-size: clamp(19px, 2vw, 22px); max-width: 46ch; margin-top: 14px; }
+header { padding-block: 64px 26px; }
+section { padding-block: 48px; }
+.panel { background: var(--panel); }
+
+.key { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.badge { display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 600; padding: 5px 12px; border-radius: 99px; white-space: nowrap; }
+.badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.ok { color: var(--ok); background: #e8f6ee; }
+.maybe { color: var(--maybe); background: #ececf0; }
+.no { color: var(--no); background: #fcebeb; }
+
+.list { display: grid; gap: 10px; margin-top: 22px; }
+.row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 18px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 20px; }
+.row strong { font-size: 19px; letter-spacing: -0.01em; }
+.row p { grid-column: 1 / -1; margin: 0; color: var(--grey); font-size: 16px; }
+.check { counter-reset: s; display: grid; gap: 14px; margin-top: 20px; padding: 0; list-style: none; }
+.check li { background: var(--card); border-radius: 18px; padding: 20px 22px 20px 64px; position: relative; }
+.check li::before { counter-increment: s; content: counter(s); position: absolute; left: 20px; top: 20px; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-size: 14px; font-weight: 700; }
+.cta { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 30px; text-align: center; }
+.cta a { font-weight: 600; font-size: 21px; text-decoration: none; display: inline-block; margin: 6px 14px; user-select: all; }
+.updated { color: var(--grey); font-size: 15px; }
+footer { border-top: 1px solid var(--line); padding-block: 24px 40px; color: var(--grey); font-size: 14px; }
+footer .wrap { display: flex; gap: 18px; flex-wrap: wrap; }
+@media (max-width: 600px) { nav .links { display: none; } .row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="wrap">
+  <a class="brand" href="index.html"><span class="ring" aria-hidden="true"></span>Umbryx TV</a>
+  <div class="links"><a href="#tested">Tested</a><a href="#should">Should work</a><a href="#wont">Won't work</a><a href="#check">Check your TV</a></div>
+</div></nav>
+
+<header><div class="wrap">
+  <h1>Works with</h1>
+  <p class="lede">Umbryx TV works on TVs and streaming boxes that run <b>Android TV</b> or <b>Google TV</b>. Here's what it's been tested on so far, and how to check yours.</p>
+  <div class="key"><span class="badge ok">Tested</span><span class="badge maybe">Should work</span><span class="badge no">Won't work</span></div>
+  <p class="updated" style="margin-top:16px">Updated 2 November 2026. This list grows with every installation.</p>
+</div></header>
+
+<section id="tested"><div class="wrap">
+  <h2>Tested</h2>
+  <div class="list">
+    <div class="row"><strong>Haier Android TV</strong><span class="badge ok">Tested</span><p>Android TV 11. The home screen, profiles and themes.</p></div>
+    <div class="row"><strong>Android TV (Android 11)</strong><span class="badge ok">Tested</span><p>Everything, including game night, the remote lock and updates, on Google's Android TV test system.</p></div>
+  </div>
+</div></section>
+
+<section id="should" class="panel"><div class="wrap">
+  <h2>Should work</h2>
+  <p style="color:var(--grey)">These run Android TV or Google TV, so Umbryx TV should work on them, but they haven't been tested yet. I'll check your exact model before I visit.</p>
+  <div class="list">
+    <div class="row"><strong>Sony Bravia</strong><span class="badge maybe">Should work</span><p>Models with Android TV or Google TV.</p></div>
+    <div class="row"><strong>TCL</strong><span class="badge maybe">Should work</span><p>Models with Android TV or Google TV (not Roku TV models).</p></div>
+    <div class="row"><strong>Hisense</strong><span class="badge maybe">Should work</span><p>Only the models with Google TV or Android TV. Most Hisense TVs use VIDAA instead, which won't work.</p></div>
+    <div class="row"><strong>Philips</strong><span class="badge maybe">Should work</span><p>Models with Android TV or Google TV.</p></div>
+    <div class="row"><strong>Kogan</strong><span class="badge maybe">Should work</span><p>Models with Android TV or Google TV.</p></div>
+    <div class="row"><strong>Xiaomi</strong><span class="badge maybe">Should work</span><p>Mi TV and TV boxes with Android TV or Google TV.</p></div>
+    <div class="row"><strong>Chromecast with Google TV, Google TV Streamer</strong><span class="badge maybe">Should work</span><p>Plugs into any TV with HDMI, so it's an easy way to get Umbryx TV on a TV that can't run it.</p></div>
+    <div class="row"><strong>NVIDIA Shield TV</strong><span class="badge maybe">Should work</span><p>Android TV.</p></div>
+  </div>
+</div></section>
+
+<section id="wont"><div class="wrap">
+  <h2>Won't work</h2>
+  <p style="color:var(--grey)">These use their own systems, not Android TV. Good news: a Chromecast with Google TV or Google TV Streamer plugged into the TV's HDMI port can run Umbryx TV on any of them.</p>
+  <div class="list">
+    <div class="row"><strong>Samsung</strong><span class="badge no">Won't work</span><p>Uses Tizen.</p></div>
+    <div class="row"><strong>LG</strong><span class="badge no">Won't work</span><p>Uses webOS.</p></div>
+    <div class="row"><strong>Hisense with VIDAA</strong><span class="badge no">Won't work</span><p>Most Hisense TVs. Check the model first.</p></div>
+    <div class="row"><strong>Roku TVs and Roku sticks</strong><span class="badge no">Won't work</span><p>Uses Roku OS.</p></div>
+    <div class="row"><strong>Amazon Fire TV</strong><span class="badge no">Won't work</span><p>Uses Fire OS, which doesn't allow a different home screen.</p></div>
+    <div class="row"><strong>Apple TV</strong><span class="badge no">Won't work</span><p>Uses tvOS.</p></div>
+  </div>
+</div></section>
+
+<section id="check" class="panel"><div class="wrap">
+  <h2>How to check your TV</h2>
+  <ol class="check">
+    <li><b>Look at the home screen.</b> If it says "Google TV" or has rows of apps with a Google search bar or microphone, it's almost certainly Android TV or Google TV.</li>
+    <li><b>Look in Settings.</b> Open <b>Settings › System › About</b> (or <b>Device Preferences › About</b>). If you see "Android TV OS" or "Google TV", you're good.</li>
+    <li><b>Look at the remote.</b> A Google Assistant or microphone button and a YouTube or Netflix button usually means Android TV or Google TV.</li>
+    <li><b>Not sure? Just ask.</b> Send me your TV's brand and model (it's on a sticker on the back) and I'll check before I come out. If it can't run Umbryx TV when I arrive, you pay nothing.</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <div class="cta">
+    <h2>Send me your TV's model</h2>
+    <p style="color:var(--grey)">I'll tell you straight away if Umbryx TV will work on it.</p>
+    <a href="mailto:umbryxtvsupport@gmail.com">umbryxtvsupport@gmail.com</a><a href="tel:0423150432">0423 150 432</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><a href="index.html">Home</a><a href="help.html">Help</a><a href="feedback.html">Feedback</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms &amp; refunds</a><span>Umbryx TV · Declan</span><span>Designed and built with Claude, an AI by Anthropic.</span></div></footer>
+</body>
+</html>
