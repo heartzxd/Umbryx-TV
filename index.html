@@ -9,6 +9,7 @@
 <meta property="og:description" content="Your TV. Finally yours. Installed at your home, from $35.">
 <meta property="og:image" content="https://heartzxd.github.io/Umbryx-TV/ad-poster.jpg">
 
+<link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E %3Crect x='9' y='15' width='82' height='58' rx='15' fill='none' stroke='%231d1d1f' stroke-width='8'/%3E %3Crect x='38' y='81' width='24' height='6' rx='3' fill='%231d1d1f'/%3E %3Crect x='23' y='30' width='25' height='28' rx='6.5' fill='%23ff6a2b'/%3E %3Crect x='54' y='31' width='23' height='10' rx='5' fill='%231d1d1f' opacity='.2'/%3E %3Crect x='54' y='47' width='12' height='10' rx='5' fill='%231d1d1f' opacity='.1'/%3E %3Ccircle cx='73' cy='52' r='3.2' fill='%231d1d1f' opacity='.05'/%3E %3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap">
@@ -46,8 +47,7 @@ nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; backgro
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 21; background: var(--bg); }
 nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; letter-spacing: -0.03em; text-decoration: none; }
-.ring { width: 20px; height: 20px; border-radius: 50%; border: 3px solid var(--ink); position: relative; flex: none; }
-.ring::after { content: ""; position: absolute; inset: -3px; border-radius: 50%; border: 3px solid transparent; border-top-color: var(--accent); transform: rotate(30deg); }
+.ring { width: 26px; height: 26px; flex: none; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E %3Crect x='9' y='15' width='82' height='58' rx='15' fill='none' stroke='%231d1d1f' stroke-width='8'/%3E %3Crect x='38' y='81' width='24' height='6' rx='3' fill='%231d1d1f'/%3E %3Crect x='23' y='30' width='25' height='28' rx='6.5' fill='%23ff6a2b'/%3E %3Crect x='54' y='31' width='23' height='10' rx='5' fill='%231d1d1f' opacity='.2'/%3E %3Crect x='54' y='47' width='12' height='10' rx='5' fill='%231d1d1f' opacity='.1'/%3E %3Ccircle cx='73' cy='52' r='3.2' fill='%231d1d1f' opacity='.05'/%3E %3C/svg%3E") center/contain no-repeat; }
 nav ul { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; font-size: 14px; color: var(--grey); }
 nav ul a { text-decoration: none; }
 nav ul a:hover { color: var(--ink); }
