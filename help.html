@@ -123,6 +123,7 @@ footer .wrap { display: flex; gap: 18px; flex-wrap: wrap; }
         <li>On the phone remote, open <b>Profiles</b> and tap <b>Add profile</b>.</li>
         <li>Type their name, pick a picture and a colour. Add a 4-number PIN if you'd like.</li>
         <li>For a kid, turn on <b>Kids profile</b>, then choose which apps they can use, a daily TV limit and a bedtime. After bedtime the TV stays locked for them until 6am.</li>
+        <li>To give a kid more time today, open <b>Profiles</b> on the owner's phone and use <b>Kids today</b>: +15 min, +30 min, +1 hr, or <b>Stay up 30 min</b>. The TV unlocks straight away, and it all resets tomorrow.</li>
       </ol>
       <p class="note">Everyone shows up in "Who's watching?" when the TV turns on. Tap a profile on your phone to be them; <b>Put on TV</b> switches the TV too.</p>
     </div>
@@ -186,13 +187,13 @@ footer .wrap { display: flex; gap: 18px; flex-wrap: wrap; }
     <details><summary>The phone remote's buttons don't do anything</summary>
       <p>The buttons need the TV's <b>Network debugging</b> to be allowed. On the TV, open <b>Umbryx TV Settings › Phone remote</b> and select <b>Connect</b>. If the TV asks <b>"Allow debugging?"</b>, tick <b>Always allow</b> and pick <b>Allow</b>.</p></details>
     <details><summary>The TV asked "Allow debugging?" again</summary>
-      <p>That's Umbryx TV asking to use the phone remote's buttons, sometimes after the TV restarts. Tick <b>Always allow</b> and pick <b>Allow</b>.</p></details>
+      <p>That's Umbryx TV asking to use the phone remote's buttons. Tick <b>Always allow</b> and pick <b>Allow</b>. Android can forget it after a week unused; to stop that for good, open <b>Developer options</b> and turn on <b>Disable adb authorization timeout</b> (I do this when I install).</p></details>
     <details><summary>The TV's remote doesn't do anything</summary>
       <p>The remote might be locked. On the owner's phone, open the Remote screen and tap <b>Unlock the TV remote</b>. If that's not it, check the remote's batteries.</p></details>
     <details><summary>The Home button opens Google TV, not Umbryx TV</summary>
       <p>A short press opens Umbryx TV and holding it opens Google TV, so try a quick press. If it still doesn't, get in touch and I'll sort it out.</p></details>
     <details><summary>A kid's profile is locked</summary>
-      <p>They've used up today's TV time or it's past their bedtime. A grown-up can switch to their own profile, or change the limits in <b>Profiles</b> on the owner's phone.</p></details>
+      <p>They've used up today's TV time or it's past their bedtime. A grown-up can switch to their own profile, give more time from <b>Kids today</b> in <b>Profiles</b> on the owner's phone, or change the limits there.</p></details>
   </div>
 </div></section>
 
